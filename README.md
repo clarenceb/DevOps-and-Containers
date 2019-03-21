@@ -201,7 +201,7 @@ You should be on your project overview page.  We will explore our project code. 
 Our repository contains the code for a .NET Core MVC (Model View Controller) website.  We have some other files in this project that enable us to deploy the website to containers:
 
 
-**dockerfile** - This file enables Docker to build an image automatically by reading the instructions contained within.  In this case we will be pulling the aspnetcore:1.0 image from the Microsoft Docker hub.
+**src/MyHealth.web/Dockerfile** - This file enables Docker to build an image automatically by reading the instructions contained within.  In this case we will be pulling the aspnetcore:1.0 image from the Microsoft repository on Docker Hub.
 
 **docker-compose.yml** - This file defines the image that will be used and points to the Dockerfile above which we used to build the image for us.
 
