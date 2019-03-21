@@ -178,7 +178,7 @@ You will be prompted to download a Kubernetes Azure DevOps extension followed by
 
 <img src="screenshots/devopsdemogenerator-extensions.PNG" alt="Get extension" width="400px"/>
 
-Install the extension on your Azure DevOps account.  Once installed, return to the demo generator and create your project.  To know more about [how to nstall free extensions for Azure DevOps!] here(https://docs.microsoft.com/en-us/azure/devops/marketplace/install-vsts-extension?view=vsts)
+Install the extension on your Azure DevOps account.  Once installed, return to the demo generator and create your project.  Learn more about how to [install free extensions for Azure DevOps](https://docs.microsoft.com/en-gb/azure/devops/marketplace/install-extension)
 
 <img src="screenshots/kube_extension2.PNG" alt="Get extension" width="400px"/>
 
@@ -203,9 +203,9 @@ Set everything to on:
 
 <img src="screenshots/VSTS_enablepreview2.PNG" alt="Enable features" width="400px"/>
 
-Now, we will explore our project code.  Select Code and then Files on the left hand side menu:
+Now, we will explore our project code.  Select **Repos** and then **Files** on the left hand side menu:
 
-<img src="screenshots/VSTS_code.PNG" alt="Enable features" width="400px"/>
+<img src="screenshots/VSTS_code.PNG" alt="Enable features" width="600px"/>
 
 Our repository contains the code for a .NET Core MVC (Model View Controller) website.  We have some other files in this project that enable us to deploy the website to containers:
 
