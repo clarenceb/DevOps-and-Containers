@@ -194,16 +194,7 @@ After a minute or two, your project will be successfully created.  Navigate to y
 
 ##  Explore repository
 
-Once you're on your project overview page, I recommend you switch over to the new navigation layout.  To do this, click your profile on the top right hand side, and select 'Preview Features'.  
-
-<img src="screenshots/VSTS_enablepreview.PNG" alt="Preview Features" width="400px"/>
-
-
-Set everything to on:
-
-<img src="screenshots/VSTS_enablepreview2.PNG" alt="Enable features" width="400px"/>
-
-Now, we will explore our project code.  Select **Repos** and then **Files** on the left hand side menu:
+You should be on your project overview page.  We will explore our project code.  Select **Repos** and then **Files** on the left hand side menu:
 
 <img src="screenshots/VSTS_code.PNG" alt="Enable features" width="600px"/>
 
