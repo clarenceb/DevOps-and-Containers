@@ -208,35 +208,36 @@ Our repository contains the code for a .NET Core MVC (Model View Controller) web
 **mhc-aks.yaml** - This is our Kubernetes manifest file.  In here, we define the deployments, services and pods that we need for our application to run. 
 
 
-Now, we need to change the code in two files to make sure we deploy our application correctly.  
+Now, we need to change the code in two files to make sure we deploy our application correctly:
 
+- `mhc-aks.yml` and
+- `src/MyHealth.Web/appsettings.json`
 
-1. Select mhc-aks.yml from the list of files in your repository.  You will see the option to edit the file as below:
-
-<img src="screenshots/edit_yaml.PNG" alt="Select yaml file" width="400px"/>
-
-Scroll down to line 93 and replace "\_\_ACR\_\_" with the name you gave your Container Registry earlier (eg. myacr2001.azurecr.io). Before saving your change, we strongly recommended to go to 'Boards' and create a work item linked to this change. Once you have made the change, hit the commit button, then Commit again in the menu that pops up to save your change by selecting the corresponding work item. 
-
-2. appsettings.json
-
-Navigate to appsettings.json in /src/MyHealth.Web/ and select the appsettings.json file.  Edit line 9 to reflect the name of your own SQL Server you created earlier.
-
-<img src="screenshots/edit_appsettings.PNG" alt="Edit appsettings" width="400px"/>
-
-You may also need to change the SQL DB user name and password in the same connection string. If you used the one-click deployment option, you can find the credentials for your SQL instance by viewing the supportingservices.json file. Hint: You can find the full connection string by navigating to the DB instance via the Azure Portal. However, do note the connection string excludes the credentials (i.e username and password).
-
-Commit your changes and proceed to the next step.
+However, it is not good security practice to commit literal secrets (e.g. passwords) or environment-specific config to your files in version control.  Instead, the project uses the Replace Tokens task to substitute variables from your pipeline defintition into the target files when the build runs.  In the next step we'll update our pipeline variables with our specific values.
 
 ## Build Definition
 
-Now we can edit our build to correctly build our Docker image.  Select our build definition 'MyHealth.AKS.build' and click the edit button. 
+Now we can edit our build to correctly build our Docker image.  Select our build definition 'MyHealth.AKS.build' in Azure DevOps and click the edit button.
 
 <img src="screenshots/VSTS_selectbuild.PNG" alt="Select build" width="400px"/>
 
-You will see four Docker Compose tasks.  You will need to repeat the next step for each build task highlighted below:
+Click the **Variables** tab for the build defintion and update the following variables:
+
+* ACR
+* SQLpassword
+* SQLserver
+* SQLuser
+
+<img src="screenshots/pipeline_vars.PNG" alt="Pipeline variables" width="500px"/>
+
+You can find the SQL Database server name in the Azure Portal: select your resource group, select your SQL Database resource, then copy the **Server name** value in the top right pane of the **Overview** blade.
+
+If you used the one-click deployment option, you can find the credentials for your SQL Database instance by viewing the `azuredeploy.json` file. Hint: You can find the full connection string by navigating to the SQL DB instance via the Azure Portal. However, do note the connection string excludes the credentials (i.e username and password) and has placeholders instead for your to update.
+
+Next, click on the **Task** tab. You will see four Docker Compose tasks.  You will need to repeat the next step for each build task highlighted below:
 
 
-1. Under 'AzureSubscription' select the your subscriptionL.  The first time you do this, you will need to Authorize the service connection (this step allows you to deploy from VSTS into your Azure subscription).
+1. Under 'AzureSubscription' select the your subscription.  The first time you do this, you will need to Authorize the service connection (this step allows you to deploy from Azure DevOps into your Azure cloud subscription).
 
 1. Under Azure Container Registry, select the container registry you created earlier.
 
