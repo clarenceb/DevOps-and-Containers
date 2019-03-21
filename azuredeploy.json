@@ -203,6 +203,9 @@
             "name": "[parameters('acrName')]",
             "apiVersion": "2017-03-01",
             "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "Standard"
+            },
             "tags": {
                 "displayName": "Container Registry",
                 "container.registry": "[parameters('acrName')]"
