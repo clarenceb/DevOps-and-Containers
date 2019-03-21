@@ -146,7 +146,7 @@
         },
         "kubernetesVersion": {
             "type": "string",
-            "defaultValue": "1.9.11",
+            "defaultValue": "1.12.6",
             "allowedValues": [
                 "1.7.15",
                 "1.7.16",
@@ -158,7 +158,9 @@
                 "1.10.7",
                 "1.10.8",
                 "1.11.2",
-                "1.11.3"
+                "1.11.3",
+                "1.12.5",
+                "1.12.6"
             ],
             "metadata": {
                 "description": "The version of Kubernetes."
