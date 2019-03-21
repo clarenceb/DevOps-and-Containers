@@ -349,6 +349,8 @@ To find out what public IP address has been assigned, we can type the following 
 kubectl get service mhc-front
 ```
 
+Note: It can take a few mins for a public IP address to be assigned to your frontend load balancer -- if which case you'll see "`<pending>`".  Run the command above again after a min or two to see if you have an IP address.
+
 <img src="screenshots/kubectl_services.PNG" alt="Front end service" width="400px"/>
 
 Copy and paste the external IP into a browser window.  You should see your newly deployed Health Clinic application.
