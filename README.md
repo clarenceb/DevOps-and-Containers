@@ -255,8 +255,8 @@ You will see our release pipeline.  Once a new build is ready, we have a release
 
 <img src="screenshots/VSTS_variables.PNG" alt="Edit variables" width="400px"/>
 
-1. Replace YOUR_ACR with the name of the container registry you created earlier.
-1. Replace YOUR_DBSERVER with the name of the SQL server you created earlier.
+1. Replace `ACR` with the name of the container registry you created earlier.
+1. Replace `SQLserver` with the name of the SQL server you created earlier.
 
 Now that our variables are referencing our Azure resources, we can edit the Release tasks.  Click the Tasks menu item (it should have a red exclamation mark beside it) and click 'Dev'.
 
