@@ -387,7 +387,7 @@ We want to check the box that says **Enable continuous integration**. Then click
 
 This will now trigger our Build automatically when a change has been made to the application's code on the *master* branch. 
 
-> Branches allow developers to work on a new feature in a separate branch from the main code, then re-introduce their code when it's ready, by performing something called a *merge*. We'll just be using the master branch in this lab for simplicity.
+> Branches allow developers to work on a new feature in a separate branch from the main code, then re-introduce their code when it's ready, by performing something called a *merge*. We'll just be using the master branch in this lab for simplicity.  A popular workflow (and one supported in Azure DevOps) is the Pull-Request workflow where you create a feature branch and then ask for your changes to be approved for merging into the master branch.  Branch Policies can be used to set this workflow up along with build validation on each Pull Request before acceptance into master.
 
 Let's test if this works. Head over to the Code page which should open your code files. On the top right, you'll see an option called 'Clone' - give it a click and copy the Clone URL to your clipboard.
 
