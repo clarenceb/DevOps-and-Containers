@@ -322,7 +322,7 @@ You will see a message similar to the below.  Follow the instructions to authent
 
 <img src="screenshots/Azlogin.PNG" alt="AZ login" width="400px"/>
 
-1. Once you are successfully authenticated, type the following, replacing yourResourceGroup with the one you created earlier, and yourAKSname with AKS (or whatever you names your Kubernetes service)
+2. Once you are successfully authenticated, type the following, replacing yourResourceGroup with the one you created earlier, and yourAKSname with AKS (or whatever you names your Kubernetes service)
 
 ``` bash
 az aks get-credentials --resource-group yourResourceGroup --name yourAKSname
