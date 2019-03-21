@@ -389,7 +389,7 @@ This will now trigger our Build automatically when a change has been made to the
 
 > Branches allow developers to work on a new feature in a separate branch from the main code, then re-introduce their code when it's ready, by performing something called a *merge*. We'll just be using the master branch in this lab for simplicity.  A popular workflow (and one supported in Azure DevOps) is the Pull-Request workflow where you create a feature branch and then ask for your changes to be approved for merging into the master branch.  Branch Policies can be used to set this workflow up along with build validation on each Pull Request before acceptance into master.
 
-Let's test if this works. Head over to the Code page which should open your code files. On the top right, you'll see an option called 'Clone' - give it a click and copy the Clone URL to your clipboard.
+Let's test if this works. Head over to the Repos page which should open your code files. On the top right, you'll see an option called 'Clone' - give it a click and copy the Clone URL to your clipboard.
 
 <img src="screenshots/GitClone.PNG" alt="Git Clone" width="600px"/>
 
@@ -449,7 +449,7 @@ Click the elipses (...) in the top right corner of the Source Control panel, the
 
 Now Git will first pull down any changes that have been made remotely since we copied it to our machine, it will check if there are any conflicts, and if not (and there shouldn't be since no-one else is using our repo!) it will then merge and push the code back up to Azure DevOps.
 
-Let's double check that this has happened. Go back to Azure DevOps in your web browser and refresh the Code page. You should see your commit message has appeared next to the 'src' folder (since this contains the homepage code you changed).
+Let's double check that this has happened. Go back to Azure DevOps in your web browser and refresh the Repos page. You should see your commit message has appeared next to the 'src' folder (since this contains the homepage code you changed).
 
 <img src="screenshots/VSTSChanges.PNG" alt="Azure DevOps Changes" width="600px"/>
 
