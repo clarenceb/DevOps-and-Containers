@@ -309,7 +309,9 @@ After a few minutes, the release should be successful.  If you get any errors re
 
 Now - Azure DevOps has deployed the website to a Kubernetes cluster - but how can we see it? 
 
-> Note: You will need Azure CLI and kubectl for this next step. [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and [install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+> Note: Unless you use the Azure CloudShell, you will need to insteall Azure CLI and kubectl for this next step. [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and [install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+
+If using Azure Cloud Shell, skip to step `2.`.
 
 1. Open a CMD prompt and type the following:
 
