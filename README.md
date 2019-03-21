@@ -129,10 +129,10 @@ We have just copied all the details we'll need to access our Azure resources usi
 
 * **Subscription:** Leave as default (it should auto populate with your lab subscription)
 * **Resource Group:** Create a new resource group and give it a name
-* **Location:** East US
+* **Location:**  East US
 * **Acr Name:** Choose a unique, lowercase name and must be between 5 and 50 characters
 * **DB Server Name:** Choose a unique, lowercase name (name it something like labdbaksdev35) but change the number
-* **AKS Name:** AKS
+* **AKS Name:** aks
 * **DNS Prefix:** Choose a unique, lowercase name
 * **SSH RSA Public Key:** Enter the public key you just saved to your notepad (the key beginning with `ssh-rsa`)
 * **Service Principal Client:** Enter the appId generated earlier
@@ -156,7 +156,7 @@ Once your resources are deployed, we need to make a note of some of the resource
 
 Now we will generate our demo project, using Azure DevOps Generator! 
 
-Go to [Azure DevOps Generator!](https://vstsdemogenerator.azurewebsites.net) (right-click and open in a new tab) and either sign in with your Azure subscription credentials or select sign up for a new account if you are taking part in this lab at Ready.
+Go to [Azure DevOps Generator!](https://azuredevopsdemogenerator.azurewebsites.net/) (right-click and open in a new tab) and either sign in with your Azure subscription credentials or select sign up for a new account if you are taking part in this lab at Ready.
 
 > NOTE: Please use Chrome when accessing the demo generator.
 
