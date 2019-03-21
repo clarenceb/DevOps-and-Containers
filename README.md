@@ -260,23 +260,21 @@ You will see our release pipeline.  Once a new build is ready, we have a release
 
 Now that our variables are referencing our Azure resources, we can edit the Release tasks.  Click the Tasks menu item (it should have a red exclamation mark beside it) and click 'Dev'.
 
-In the 'Execute Azure SQL: DacpacTask', update the Azure Subscription to the one you authorized earlier. <b>On this same task</b>, find the field <b>'DACPAC File'</b> and change the path from '$(System.DefaultWorkingDirectory)/AKS/deploy/myhealthclinic.dacpac' to <b>'$(System.DefaultWorkingDirectory)/MyHealth.AKS.build/deploy/myhealthclinic.dacpac'</b>.
+In the 'Execute Azure SQL: DacpacTask', update the Azure Subscription to the one you authorized earlier.
 
 <img src="screenshots/VSTS_dacpac.PNG" alt="Edit SQL deployment" width="400px"/>
 
- Under the AKS Deployment phase, click the first task.  Scroll down to 'Secrets':
+  Under the AKS Deployment phase, click the first task.   Choose your Azure subscription, Resource Group and Kubernetes Cluster from the drop down boxes.
+ 
+  Scroll down to 'Secrets':
 
- Again, choose your Azure subscription from the drop down box.  Next, choose your Container Registry from the drop down box.  You now need to grab the appID from your Service Principal that you created earlier.  Paste that into the 'Secret Name' text box.
+  Next, choose your Azure Subscription again from the drop down box.  You now need to grab the appID from your Service Principal that you created earlier.  Paste that into the **Secret name** text box.
 
 <img src="screenshots/VSTS_releaseconfig.PNG" alt="Edit release" width="400px"/>
 
- Scroll back up to the top, and change the version of the Task to 'Preview'.  Then choose your Azure subscription, the resource group you created earlier, and choose AKS for the Kubernetes Cluster:
-
-<img src="screenshots/VSTS_releaseconfig2.PNG" alt="Edit release" width="400px"/>
-
-  Scroll back down to 'Secrets' and make sure your Azure subscription and Container registry are still there (they should be, but you may have to select your Azure subscription again).
-
-  We can now move on to the second task in our AKS deployment phase.  Simply repeat the steps above and save your release. You should also go to your build definition and repeat the same steps to make sure your build linked to the same AKS cluster within the same Azure subscription for the following tasks : Run Services, Build Services, Push Services and lock services.
+   We can now move on to the second task in our AKS deployment phase.  Simply repeat the steps above and save your release.
+   
+   You should also go to your build definition and check your Azure Subscription and Container Registry are populated for the following tasks : Run Services, Build Services, Push Services and lock services.
 
 
 ## Kick off our build and release pipeline
