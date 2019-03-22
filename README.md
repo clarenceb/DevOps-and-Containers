@@ -270,6 +270,31 @@ In the 'Execute Azure SQL: DacpacTask', update the Azure Subscription to the one
    
   You should also go to your build definition and check your Azure Subscription and Container Registry are populated for the following tasks : Run Services, Build Services, Push Services and lock services.
 
+  Update your Kubernetes manifest to specify an image pull secret in order for AKS to be authorized to pull images from your Azure Container Registry:
+
+  Edit file `mhc-aks.yaml` to add the `imagePullSecrets` section:
+
+  ```yaml
+	containers:
+
+	- name: mhc-front
+
+	image: __ACR__/myhealth.web:latest
+
+	#...snip...
+
+	env:
+
+	- name: REDIS
+
+		value: "mhc-back"
+
+	imagePullSecrets:
+
+	- name: mysecretkey
+  ```
+
+  Commit your changes to the file `mhc-aks.yaml`.
 
 ## Kick off our build and release pipeline
 
