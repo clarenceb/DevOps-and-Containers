@@ -110,9 +110,13 @@ spec:
 
         env:
 
-        - name: REDIS
+          - name: REDIS
 
-          value: "mhc-back"
+            value: "mhc-back"
+
+        imagePullSecrets:
+        
+          - name: mysecretkey
 
 ---
 
