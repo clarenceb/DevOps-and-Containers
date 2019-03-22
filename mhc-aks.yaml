@@ -114,9 +114,9 @@ spec:
 
             value: "mhc-back"
 
-        imagePullSecrets:
+      imagePullSecrets:
         
-          - name: mysecretkey
+        - name: mysecretkey
 
 ---
 
