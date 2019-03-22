@@ -266,15 +266,9 @@ In the 'Execute Azure SQL: DacpacTask', update the Azure Subscription to the one
 
   Under the AKS Deployment phase, click the first task.   Choose your Azure subscription, Resource Group and Kubernetes Cluster from the drop down boxes.
  
-  Scroll down to 'Secrets':
-
-  Next, choose your Azure Subscription again from the drop down box.  You now need to grab the appID from your Service Principal that you created earlier.  Paste that into the **Secret name** text box.
-
-<img src="screenshots/VSTS_releaseconfig.PNG" alt="Edit release" width="400px"/>
-
-   We can now move on to the second task in our AKS deployment phase.  Simply repeat the steps above and save your release.
+  We can now move on to the second task in our AKS deployment phase.  Simply repeat the steps above and save your release.
    
-   You should also go to your build definition and check your Azure Subscription and Container Registry are populated for the following tasks : Run Services, Build Services, Push Services and lock services.
+  You should also go to your build definition and check your Azure Subscription and Container Registry are populated for the following tasks : Run Services, Build Services, Push Services and lock services.
 
 
 ## Kick off our build and release pipeline
